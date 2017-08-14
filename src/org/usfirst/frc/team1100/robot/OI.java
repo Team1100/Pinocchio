@@ -1,8 +1,7 @@
 package org.usfirst.frc.team1100.robot;
 
 import org.usfirst.frc.team1100.robot.input.XboxController;
-import org.usfirst.frc.team1100.robot.commands.SpinClockwise;
-import org.usfirst.frc.team1100.robot.commands.SpinCounterclockwise;
+import org.usfirst.frc.team1100.robot.commands.Spin;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -12,7 +11,7 @@ public class OI {
 
 	private static OI instance;
 	
-	private XboxController xbox;
+	public XboxController xbox;
 	
 	public static OI getInstance() {
 		if (instance == null) {
@@ -26,7 +25,10 @@ public class OI {
 		xbox = new XboxController(RobotMap.U_XBOX, .1);
 		
 		// Button assignments
-		xbox.getButtonA().whileHeld(new SpinClockwise());
-		xbox.getButtonB().whileHeld(new SpinCounterclockwise());
+		// null
+	}
+	
+	public XboxController getXbox() {
+		return xbox;
 	}
 }

@@ -4,7 +4,7 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.Talon;
 
 import org.usfirst.frc.team1100.robot.RobotMap;
-import org.usfirst.frc.team1100.robot.commands.StopSpin;
+import org.usfirst.frc.team1100.robot.commands.Spin;
 
 /**
  * This is the subsystem that is for the motor with the strip of paper taped on it, aka "Flag"
@@ -28,7 +28,7 @@ public class Flag extends Subsystem {
 
     public void initDefaultCommand() {
         
-        setDefaultCommand(new StopSpin());
+        setDefaultCommand(new Spin());
     }
     /**
      * Set the speed of the spin of the flag

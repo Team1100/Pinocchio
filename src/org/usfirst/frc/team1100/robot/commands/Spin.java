@@ -1,14 +1,16 @@
 package org.usfirst.frc.team1100.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
+import org.usfirst.frc.team1100.robot.OI;
+import org.usfirst.frc.team1100.robot.input.XboxController;
 import org.usfirst.frc.team1100.robot.subsystems.Flag;
 
 /**
- *
+ * Command that spins the Flag (subsystem)
  */
-public class StopSpin extends Command {
+public class Spin extends Command {
 
-    public StopSpin() {
+    public Spin() {
         requires(Flag.getInstance());
     }
 
@@ -18,7 +20,7 @@ public class StopSpin extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Flag.getInstance().setSpeed(0.0);
+    	Flag.getInstance().setSpeed(OI.getInstance().xbox.getAxis(XboxController.XboxAxis.kLeftX));
     }
 
     // Make this return true when this Command no longer needs to run execute()
