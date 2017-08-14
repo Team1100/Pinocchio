@@ -1,7 +1,6 @@
 package org.usfirst.frc.team1100.robot;
 
 import org.usfirst.frc.team1100.robot.input.XboxController;
-import org.usfirst.frc.team1100.robot.commands.Spin;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -11,7 +10,7 @@ public class OI {
 
 	private static OI instance;
 	
-	public XboxController xbox;
+	private XboxController xbox;
 	
 	public static OI getInstance() {
 		if (instance == null) {

@@ -20,7 +20,7 @@ public class Spin extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Flag.getInstance().setSpeed(OI.getInstance().xbox.getAxis(XboxController.XboxAxis.kLeftX));
+    	Flag.getInstance().setSpeed(OI.getInstance().getXbox().getAxis(XboxController.XboxAxis.kLeftX));
     }
 
     // Make this return true when this Command no longer needs to run execute()

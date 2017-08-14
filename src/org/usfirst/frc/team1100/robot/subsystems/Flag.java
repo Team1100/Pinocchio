@@ -12,7 +12,7 @@ import org.usfirst.frc.team1100.robot.commands.Spin;
 public class Flag extends Subsystem {
 
 	private static Flag flag;
-	private Talon motor;
+	public Talon motor;
 
 
 	public static Flag getInstance() {
