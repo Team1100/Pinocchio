@@ -24,7 +24,6 @@ public class OI {
 		xbox = new XboxController(RobotMap.U_XBOX, .1);
 		
 		// Button assignments
-		// null
 	}
 	
 	public XboxController getXbox() {

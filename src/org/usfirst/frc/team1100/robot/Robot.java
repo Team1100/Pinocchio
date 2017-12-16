@@ -3,6 +3,7 @@ package org.usfirst.frc.team1100.robot;
 
 import org.usfirst.frc.team1100.robot.subsystems.Flag;
 import org.usfirst.frc.team1100.robot.commands.auto.*;
+import  org.usfirst.frc.team1100.robot.commands.Spin;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
@@ -103,5 +104,6 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void testPeriodic() {
+		SmartDashboard.putData("Spin:", new Spin());;
 	}
 }

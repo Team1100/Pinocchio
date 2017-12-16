@@ -1,6 +1,7 @@
 package org.usfirst.frc.team1100.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import org.usfirst.frc.team1100.robot.OI;
 import org.usfirst.frc.team1100.robot.input.XboxController;
 import org.usfirst.frc.team1100.robot.subsystems.Flag;
@@ -21,6 +22,7 @@ public class Spin extends Command {
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
     	Flag.getInstance().setSpeed(OI.getInstance().getXbox().getAxis(XboxController.XboxAxis.kLeftX));
+    	SmartDashboard.putNumber("LeftX: ", OI.getInstance().getXbox().getAxis(XboxController.XboxAxis.kLeftX));
     }
 
     // Make this return true when this Command no longer needs to run execute()
